@@ -65,29 +65,86 @@
 //Write a function that logs the object with the greatest strength attribute.
 //////////////////////////////////////////////////////////////////////////////
 
+// var orcs = [ 
+//     {name: 'Orgoth', strength: 9001},
+//     {name: 'Blaroguhh', strength: 500},
+//     {name: 'Mark', strength: 543}
+// ];
+
+// function getStrongest(orc){
+// 	var strongest = 0;
+// 	for (var i = 0; i < orc.length; i++){
+// 		if (orcs[i].strength > strongest) {
+// 			strongest = orcs[i];
+// 		}
+// 	}
+// 		return strongest;
+// }
+
+// console.log(getStrongest(orcs));
+
+//Write a function that logs the object with the lowest strength attrubute.
+///////////////////////////////////////////////////////////////////////////
+
+// function getWeakest(orc){
+// 	var weakest = orcs[0].strength;
+// 	for (var i = 0; i < orc.length; i++){
+// 		if (orcs[i].strength < weakest ){
+// 			weakest = orcs[i];
+// 		}
+// 	}
+// 	return weakest;
+// }
+
+// console.log(getWeakest(orcs));
+
+//Write a function that lists the weapons for the Strongest Orc.
+////////////////////////////////////////////////////////////////
+
 var orcs = [
-    {name: 'Orgoth', strength: 9001},
-    {name: 'Blaroguhh', strength: 500},
-    {name: 'Mark', strength: 543}
+    {
+        name: 'Orgoth',
+        strength: 9001,
+        weapons: ['Bone ax', 'Mace of Strength']
+    },
+    {
+        name: 'Blaroguhh',
+        strength: 500,
+        weapons: ['Cheeseburger', 'Spear of the Hut']
+    },
+    {
+        name: 'Mark',
+        strength: 543,
+        weapons: ['Ax of Defense', 'Dagger', 'Sword' ]
+    }
 ];
 
-function getStrongest(orc){
-	var strongest = 0;
+// function getStrongestWeapons(orc){
+// 	var strongest = 0;
+// 	for (var i = 0; i< orc.length; i++){
+// 		if (orcs[i].strength > strongest){
+// 			strongest = orcs[i];
+// 		}
+// 	}
+// 	return strongest;
+// }
+// console.log(getStrongestWeapons(orcs).weapons);
+
+//Write a function that lists the Orc that has the most the weapons.
+////////////////////////////////////////////////////////////////////
+
+function getMostWeapons(orc){
+	var most = 0;
+	var result = {};
 	for (var i = 0; i < orc.length; i++){
-		if (orcs[i].strength > strongest) {
-			strongest === orcs.strength;
+		for (var j = 0; j < orcs[i].weapons.length; j++)
+			if (orcs[i].weapons.length > most){
+				result = orcs[i];
 		}
 	}
+	return result;
 }
-
-console.log(getStrongest(orcs));
-
-
-
-
-
-
-
+console.log(getMostWeapons(orcs));
 
 
 
